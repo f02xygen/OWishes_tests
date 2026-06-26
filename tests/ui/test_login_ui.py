@@ -1,3 +1,7 @@
-def test_login(page):
+import allure
 
-    page.goto("http://localhost:3000")
+
+@allure.title("Заглушка для теста UI")
+def test_login(page):
+    with allure.step("Открыть веб-страницу"):
+        page.goto("http://localhost:3000")

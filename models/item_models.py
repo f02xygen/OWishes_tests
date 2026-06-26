@@ -46,7 +46,7 @@ class ItemOutModel(BaseModel):
     priority: str
     note: str
     position: int
-    is_resered: bool
+    is_reserved: bool
     created_at: datetime
     reservation: Reservation
 
