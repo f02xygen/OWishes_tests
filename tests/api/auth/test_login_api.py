@@ -1,5 +1,6 @@
 import allure
 
+@allure.story("Auth")
 @allure.title("Успешный логин пользователя")
 def test_login(auth_client, user_data):
     with allure.step("Зарегестрировать нового пользователя"):

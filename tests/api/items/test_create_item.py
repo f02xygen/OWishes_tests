@@ -1,5 +1,6 @@
 import allure
 
+@allure.story("Item")
 @allure.title("Создание валидного товара")
 def test_create_item(item_client, created_wid, item_data):
     with allure.step(r"Отправить POST на /api/wishlists/{wishlist_id}/items/"):

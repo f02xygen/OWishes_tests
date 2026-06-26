@@ -15,6 +15,7 @@ negative_cases = [
     }, 422)
 ]
 
+@allure.story("Auth")
 @allure.title("Успешная регистрация нового пользователя")
 def test_register(auth_client, user_data):
     with allure.step("Отправить POST на /api/auth/register"):
@@ -24,6 +25,7 @@ def test_register(auth_client, user_data):
         allure.attach(name="response text", body=json.dumps(response.json()), 
                       attachment_type=allure.attachment_type.JSON)
 
+@allure.story("Auth")
 @allure.title("Невалидная регистрация пользователя")
 @pytest.mark.parametrize("invalid_user_data, expected_status", negative_cases)                      
 def test_register_negative(auth_client, invalid_user_data, expected_status):
